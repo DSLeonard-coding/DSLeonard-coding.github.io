@@ -8059,7 +8059,7 @@ Calling setter  1  times
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>And the below will fail to compile, preventing direct modification of list elements.<br/>
 (Note, that values are immutable, so this is replacing the item in the list, not modifying it.  Modification is still allowed.)</p>
-<p>The .AsReadOnly() in the getter makes it run-time readonly, so prevents(at run-time) downcasts (which nobody should do anyway) to unlock it.  It costs a shallow copy though and isn't required.  List directly implements IReadOnlyList and can implicitly cast to it without a copy conversion.</p>
+<p>The .AsReadOnly() in the getter makes it run-time readonly, so prevents(at run-time) downcasts (which nobody should do anyway) to unlock it.  It creates wrapper overhead though and isn't needed.  List directly implements IReadOnlyList and can implicitly cast to it without a copy conversion.</p>
 </div>
 </div>
 </div>
@@ -8130,7 +8130,7 @@ Calling setter  1  times
 <p>The private variable can thus be (re)implemented as a List<t> for performance, an Observable Collection for control, or a future custom class for internal performance and external control if needed, or whatever.  Users always get a IList.</t></p>
 <p><strong>The nitty-gritty downsides</strong></p>
 <ol>
-<li><p>Oddly, functions that don't change data, should theoretically take IEnumberable<t> parameters for maximum flexibility, if random access isn't required, or  IReadOnlyList<t> if it is.  This let's users know they won't change data, and helps the compiler optimize.  But IList<t> doesn't implement IReadOnlyList<t>.  The prescribed way is  to pass MyList.AsReadonly(),  but that makes a shallow copy (slower).</t></t></t></t></p>
+<li><p>Oddly, functions that don't change data, should theoretically take IEnumberable<t> parameters for maximum flexibility, if random access isn't required, or  IReadOnlyList<t> if it is.  This let's users know they won't change data, and helps the compiler optimize.  But IList<t> doesn't implement IReadOnlyList<t>.  The prescribed way is  to pass MyList.AsReadonly(),  but that makes a wrapper that can be much slower for repeated reads.</t></t></t></t></p>
 </li>
 <li><p>Arrays internally are the fastest, but ironically they are slower than List when cast to IList.  I think this is a problem in the compiler.</p>
 </li>
@@ -8152,6 +8152,7 @@ Calling setter  1  times
 </code></pre>
 <p>List is only a little faster than IList, but can check for list too.  It does duplicate code though, which is annoying.</p>
 <p>Basically C# still let's us start easy and add in checks later with one catch, we need to have been returning by IList instead of List from the start.  You cannot sublcass List element access, so there's no way to change internals if you didn't start with IList.</p>
+<p>So here it is:</p>
 </div>
 </div>
 </div>
@@ -8222,7 +8223,7 @@ replacement:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Now I can do the exact same thing, but add setters to catch changes to individual elements in the list.  This is a little involved. But the easy stuff (above) is easy and the hard stuff is about as easy as it could be really.  We don't need to change the public</p>
+<p>Now I can do the exact same thing, but add setters to catch changes to individual elements in the list.  This is a little involved, much harder than not allowing direct access from the start, But the easy stuff (above) is easy and the hard stuff is about as easy as it could be really.  We don't need to change the public interface.  Here's how we add in element by element setting control after the fact:</p>
 </div>
 </div>
 </div>
