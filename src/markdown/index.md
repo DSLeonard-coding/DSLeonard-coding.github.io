@@ -5,14 +5,24 @@ Licenses are shown in each link.  If in doubt, all rights, reserved/ask, especia
 
 ---
 ### PyLaunch  <br><sub>A uv-based python project and git repo generator to streamline source-based deployment, dependency, and development </sub>
-- **[dsleonard-pylaunch](https://github.com/DSLeonard-coding/dsleonard-pylaunch/README.md)**
+- **[dsleonard-pylaunch](https://github.com/DSLeonard-coding/dsleonard-pylaunch/#dsleonard-pylaunch)**
+​ 
 
-### SISIFI 
-Super simple C#-like solution to polymorphic fluent classes in C++ (a super hard problem) using a shadowing method
-   usually avoided as a pitfall to do things usually believed impossible: 
-- **[SISIFI](https://github.com/DSLeonard-coding/SISIFI)**
+---  
+### git-rebubble: <br><sub>Aeorders (and squashes) git commits, even across merge and forks, without losing changes or your mind. </sub>
+The name comes from using a bubble sort of change swaps.
 ​
 
+- **[git-rebubble](https://github.com/DSLeonard-coding/git-rebubble#git-rebubble)**  
+​  
+
+--- 
+### DSLGetRepos: <br><sub>Drop-in "one-liner" git-submodule replacement, an in-tree-wrapper to modern CPM package management for C++, providing fixed submodule-like linked source paths, with added uv-like locking functonality. </sub>
+
+- **[DSLGetRepos](https://github.com/DSLeonard-coding/DSLGetRepos#DSGetRepos)**
+​
+
+---  
 ### DLG4::VolumeBuilders
 - **[DLG4::VolumeBuilders: A documented, streamlined, fluent geometry API for Geant4](https://douglas_s_leonard.gitlab.io/physics_utilities/VolumeBuilders/)**
 - **[DLG4::Units: Type-safe units for Geant4](https://github.com/DSLeonard-coding/DLG4Units)**
@@ -23,7 +33,8 @@ Super simple C#-like solution to polymorphic fluent classes in C++ (a super hard
 - [Properties and C# vs python, Jupyter notebook](Csharp_vs_python_jupyter.html)  
 
 This next one is mostly obsolete since MS shut down their polyglot development:
-- [Setting up an SoS multi-language Jupyter Notebook](SoS-install.html)
+- [Setting up an SoS multi-language Jupyter Notebook](SoS-install.html)  
+​
 - [Multi-language list benchmark tests](benchmarks.html)
 - [My wiki about how to unerstand git](https://gitlab.com/douglas.s.leonard/gitwiki)
 
@@ -43,8 +54,8 @@ This next one is mostly obsolete since MS shut down their polyglot development:
 - [git-alltrees subtree behavior with root-tree compliment and seamless merge history (no-squash/duplicates)](https://gitlab.com/douglas.s.leonard/alltrees/-/wikis/home)
 
 ### **python:** 
-- [dsleonard-pylaunch scaffolding launcher for ](https://github.com/DSLeonard-coding/dsleonard-pylaunch/README.md)
-- [dsleonard-git-tools, for github/gitlab pylaunch interaction, but useful elsewhere](https://github.com/DSLeonard-coding/dsleonard-git-tools/README.md)
+- [dsleonard-pylaunch scaffolding launcher for ](https://github.com/DSLeonard-coding/dsleonard-pylaunch)
+- [dsleonard-git-tools, for github/gitlab pylaunch interaction, but useful elsewhere](https://github.com/DSLeonard-coding/dsleonard-git-tools)
 - [qx: Console command/log-level convenience utility for phython](https://github.com/DSLeonard-coding/qx) This one is pretty handy for CLI scripting.
 - [strictdataclasses: Prevents many un-intentional or ad-hoc modification of dataclasses](https://github.com/DSLeonard-coding/strictclasses) Now with extensive test/demonstration/CI/CD
 
@@ -56,9 +67,10 @@ Largely obsolete since Lezyne quit making gps units, but the code is a useful ex
 - [[Fitfix:  Fixes garmin fit files with corrupt times](https://gitlab.com/douglas.s.leonard/FitFix)  alpha code, but it works. My first C# project.
 
 ### C++
-This first one solves polymorphic fluent classes in C++ in a very simplistic C#-like way believed impossible using a method
-   usually avoided as a pitfall. 
-- [SISIFI](https://github.com/DSLeonard-coding/SISIFI)
+Super simple C#-like solution to polymorphic fluent classes in C++ (a super hard problem) using a shadowing method
+   usually avoided as a pitfall: 
+
+- [SISIFI](https://github.com/DSLeonard-coding/SISIFI)  (under construction)
 ​
 - [ CMake module for easy Geant4, and ROOT setup, and env variable grabbing](https://github.com/DSLeonard-coding/DSLeonard-cmake)
 - [ Heterogeneous tuple order/sort by column priority list](https://gitlab.com/douglas_s_leonard/programming_utilities/cpp/tuple_comp)  Good for sorting column-wise heterogeneous output. Harder than it sounds.
