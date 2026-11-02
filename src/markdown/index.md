@@ -5,7 +5,7 @@ Licenses are shown in each link.  If in doubt, all rights, reserved/ask, especia
 
 ---
 ### PyLaunch  <br><sub>A uv-based python project and git repo generator to streamline source-based deployment, dependency, and development </sub>
-- **[dsleonard-pylaunch](https://github.com/DSLeonard-coding/dsleonard-pylaunch/README.md)**
+- **[dsleonard-pylaunch](https://github.com/DSLeonard-coding/dsleonard-pylaunch/#dsleonard-pylaunch)**
 
 ### SISIFI 
 Super simple C#-like solution to polymorphic fluent classes in C++ (a super hard problem) using a shadowing method
@@ -43,8 +43,8 @@ This next one is mostly obsolete since MS shut down their polyglot development:
 - [git-alltrees subtree behavior with root-tree compliment and seamless merge history (no-squash/duplicates)](https://gitlab.com/douglas.s.leonard/alltrees/-/wikis/home)
 
 ### **python:** 
-- [dsleonard-pylaunch scaffolding launcher for ](https://github.com/DSLeonard-coding/dsleonard-pylaunch/README.md)
-- [dsleonard-git-tools, for github/gitlab pylaunch interaction, but useful elsewhere](https://github.com/DSLeonard-coding/dsleonard-git-tools/README.md)
+- [dsleonard-pylaunch scaffolding launcher for ](https://github.com/DSLeonard-coding/dsleonard-pylaunch)
+- [dsleonard-git-tools, for github/gitlab pylaunch interaction, but useful elsewhere](https://github.com/DSLeonard-coding/dsleonard-git-tools)
 - [qx: Console command/log-level convenience utility for phython](https://github.com/DSLeonard-coding/qx) This one is pretty handy for CLI scripting.
 - [strictdataclasses: Prevents many un-intentional or ad-hoc modification of dataclasses](https://github.com/DSLeonard-coding/strictclasses) Now with extensive test/demonstration/CI/CD
 
